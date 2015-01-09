@@ -1,2 +1,4 @@
-# bomberman-server
-Bomberman server in Node.js
+# Bomberman (server)
+Written in Node.js
+
+Please check [alizahid/bomberman](https://github.com/alizahid/bomberman) for details.

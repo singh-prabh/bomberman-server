@@ -1,0 +1,12 @@
+{
+  "name": "bomberman-server",
+  "version": "0.1.0",
+  "repository": "https://github.com/alizahid/bomberman-server",
+  "description": "Bomberman server in Node.js",
+  "main": "index.js",
+  "author": "Ali Zahid <ali.zahid@live.com>",
+  "dependencies": {
+    "express": "^4.10.7",
+    "socket.io": "^1.2.1"
+  }
+}

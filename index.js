@@ -8,6 +8,12 @@
 
 	var app = express();
 
+	app.get('/', function(req, res)
+	{
+		res.send('Bomberman server');
+
+	});
+
 	//	listen
 
 	var server = app.listen(process.env.PORT || 3000);
@@ -40,7 +46,8 @@
 				id: id,
 				players: [player],
 				matrix: matrix,
-				started: false
+				started: false,
+				created: Date.now()
 			};
 
 			gameId = id;
@@ -312,3 +319,19 @@
 
 		return tile && (tile.type == 'pillar' ? false : true);
 	}
+
+	//	cleanup
+
+	setInterval(function()
+	{
+		for (id in games)
+		{
+			var created = games[id].created + (1000 * 60 * 60)
+
+			if (created > Date.now())
+			{
+				delete games[id];
+			}
+		}
+
+	}, 1000 * 60 * 10);

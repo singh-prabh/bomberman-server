@@ -228,6 +228,8 @@
 
 			var game = games[gameId];
 
+			if (!game) return;
+
 			game.players.forEach(function(player, index)
 			{
 				if (player.id == socketId)

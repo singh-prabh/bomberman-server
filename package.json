@@ -8,5 +8,9 @@
   "dependencies": {
     "express": "^4.10.7",
     "socket.io": "^1.2.1"
+  },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "2.1.x"
   }
 }

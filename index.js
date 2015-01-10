@@ -126,7 +126,11 @@
 
 		socket.on('move', function(id, player, position)
 		{
-			games[id].players.forEach(function(player)
+			var game = games[id];
+
+			if (!game) return;
+
+			game.players.forEach(function(player)
 			{
 				if (player.id == socketId)
 				{
